@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Load the data
+file_path = r'C:\Users\23470\Downloads\Online Sales Data.csv'
+data = pd.read_csv(file_path)
+
+# Remove leading and trailing spaces from column names
+data.columns = data.columns.str.strip()
+
+# Check for duplicates
+duplicates = data.duplicated().sum()
+print(f"Number of duplicate rows: {duplicates}")
+data = data.drop_duplicates()

@@ -1,0 +1,7 @@
+# Check for missing values
+missing_values = data.isnull().sum()
+print(f"Missing values in each column:\n{missing_values}")
+
+# Handle missing values (example: fill with median)
+data = data.fillna(data.median(numeric_only=True))
+data = data.fillna(method='ffill').fillna(method='bfill')

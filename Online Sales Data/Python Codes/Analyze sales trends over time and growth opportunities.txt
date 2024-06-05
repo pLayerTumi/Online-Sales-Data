@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+# Convert 'Date' to datetime
+data['Date'] = pd.to_datetime(data['Date'], format='%d/%m/%Y')
+
+# Clean and convert 'Total Revenue' to numeric
+data['Total Revenue'] = data['Total Revenue'].replace('[\$,]', '', regex=True).astype(float)
+
+# Aggregate sales by month
+monthly_sales = data.resample('M', on='Date').sum()['Total Revenue']
+
+# Plot sales trends over time
+plt.figure(figsize=(10, 6))
+plt.plot(monthly_sales.index, monthly_sales.values, color='blue')
+plt.title('Sales Trends Over Time')
+plt.xlabel('Date')
+plt.ylabel('Sales')
+plt.grid(True)
+plt.show()

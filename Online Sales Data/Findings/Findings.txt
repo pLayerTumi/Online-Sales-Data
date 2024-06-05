@@ -1,0 +1,19 @@
+1. Sales Trends Over Time:
+• Identified seasonal peaks and troughs in sales.
+• Sales generally increase during certain months, indicating seasonal patterns.
+
+2. Popularity of Product Categories Across Regions:
+• Certain product categories are more popular in specific regions.
+• Regions have varied preferences, with some categories performing better in particular areas.
+
+3. Impact of Payment Methods:
+• Certain payment methods contribute more significantly to sales.
+• This can influence future payment options offered to customers.
+
+4. Top-Selling Products:
+• Identified the best-performing products in each category.
+• These products can be prioritized in inventory and marketing efforts.
+
+5. Product Performance Across Regions:
+• Some products perform exceptionally well in specific regions.
+• Tailoring marketing campaigns to regional preferences can enhance sales.

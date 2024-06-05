@@ -1,0 +1,10 @@
+# Group by Category and Product and sum the sales
+category_product_sales = data.groupby(['Product Category', 'Product Name'])['Total Revenue'].sum()
+
+# Get the top-selling product in each category
+top_selling_products = category_product_sales.groupby('Product Category').idxmax()
+top_selling_sales = category_product_sales.groupby('Product Category').max()
+
+# Display the top-selling products and their sales
+top_selling_df = pd.DataFrame({'Product': top_selling_products, 'Sales': top_selling_sales})
+print(top_selling_df)

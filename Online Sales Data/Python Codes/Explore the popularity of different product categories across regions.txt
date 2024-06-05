@@ -1,0 +1,12 @@
+import seaborn as sns
+
+# Group by Region and Category and sum the sales
+category_region_sales = data.groupby(['Region', 'Product Category'])['Total Revenue'].sum().unstack()
+
+# Plot a heatmap
+plt.figure(figsize=(12, 8))
+sns.heatmap(category_region_sales, annot=True, fmt='.2f', cmap='Blues')
+plt.title('Popularity of Product Categories Across Regions')
+plt.xlabel('Category')
+plt.ylabel('Region')
+plt.show()

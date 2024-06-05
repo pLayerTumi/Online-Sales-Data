@@ -1,0 +1,10 @@
+# Group by Region and Product and sum the sales
+region_product_sales = data.groupby(['Region', 'Product Name'])['Total Revenue'].sum().unstack()
+
+# Plot a heatmap for region-product sales
+plt.figure(figsize=(15, 10))
+sns.heatmap(region_product_sales, annot=True, fmt='.2f', cmap='Blues')
+plt.title('Product Performance Across Regions')
+plt.xlabel('Product')
+plt.ylabel('Region')
+plt.show()

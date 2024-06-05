@@ -1,0 +1,9 @@
+# Group by Payment Method and sum the sales
+payment_sales = data.groupby('Payment Method')['Total Revenue'].sum()
+
+# Plot the sales by payment method
+payment_sales.plot(kind='bar', color='blue')
+plt.title('Sales by Payment Method')
+plt.xlabel('Payment Method')
+plt.ylabel('Sales')
+plt.show()
